@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+.app {
+  font-family: "Share Tech Mono", monospace !important;
+}
+button {
+  font-size: large !important;
+}
+button:hover {
+  color: black !important;
+}
+.app__input {
+  background-color: transparent !important;
+  color: white !important;
+  border: none !important;
+  font-size: large;
+}
