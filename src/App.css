@@ -6,9 +6,7 @@
 button {
   font-size: large !important;
 }
-button:hover {
-  color: black !important;
-}
+
 .app__input {
   background-color: transparent !important;
   color: white !important;
