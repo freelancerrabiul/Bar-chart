@@ -1,13 +1,20 @@
 import { React } from "react";
 import "./App.css";
 import data from "./data.csv";
-import { select, csv } from "d3";
+import { csv, select } from "d3";
 
 function App() {
-  // Rank: "1"
-  // World: "0.185"
-  // country: "China"
-  // population: "1388232693"
+  const svg = select("svg");
+
+  const render = (data) => {
+    svg
+      .selectAll("rect")
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr("width", 300)
+      .attr("height", 300);
+  };
 
   csv(data).then((data) => {
     data.forEach((d) => {
@@ -15,7 +22,7 @@ function App() {
       d.World = +d.World;
       d.population = +d.population;
     });
-    console.log(data);
+    render(data);
   });
 
   return (
@@ -26,3 +33,8 @@ function App() {
 }
 
 export default App;
+
+// Rank: "1"
+// World: "0.185"
+// country: "China"
+// population: "1388232693"
