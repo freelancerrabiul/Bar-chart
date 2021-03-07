@@ -1,4 +1,4 @@
-const population = [
+const data = [
   {
     Rank: "1",
     country: "China",
@@ -1171,4 +1171,4 @@ const population = [
   },
 ];
 
-export default population;
+export default data;
